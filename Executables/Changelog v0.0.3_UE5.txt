@@ -1,0 +1,50 @@
+Wersja 'v0.0.3_UE5'
+
+NOWOŚCI:
+- Dodano tekst z informacją do menu pauzy
+Treść tekstu - "Niezapisany postęp zostanie utracony. Czy napewno chcesz wyjsc z gry?"
+
+- Dodano przycisk "Wróć" do menu pauzy
+
+- Dodano tekst z informacjami o sterowaniu do menu pauzy
+
+- Dodano przycisk "Wyjdź do menu" do menu pauzy
+
+- Dodano przycisk "Wyjdź do Windows" do menu pauzy
+
+- Dodano przycisk "Zapisz/Wczytaj grę" do menu pauzy
+
+- Dodano przycisk "Wróć" do głównego menu
+
+- Dodano tekst z informacjami o sterowaniu do głównego menu
+
+- Dodano tekst informujący o nazwie lokalizacji, w której aktualnie się znajdujemy(umiejscowiony w prawym górnym rogu ekranu)
+
+- Dodano dwóch testowych przeciwników typu "Guard1"
+Adnotacja:
+Przeciwnik "Guard1" wykrywa nas za pomocą zmysłu wzroku(ma ograniczone pole widzenia) i rozpoczyna podróż w naszą stronę w celu zaatakowania nas wręcz.
+Kiedy oddalimy się od niego na odpowiednią odległość przestaje nas ścigać i wraca do punktu startowego
+
+ZAKTUALIZOWANE:
+- Zmniejszono prędkość poruszania się głównego bohatera z 600 cm/s do 
+
+- Zmieniono tekst w menu głównym informujący o wersji gry z v0.0.2_UE5 na v0.0.3_UE5
+
+- Zmieniono działanie przycisku "Wyjdź z gry" - od teraz nie wyłącza on gry, tylko prowadzi do nowego menu z przyciskami "Wznów grę", "Wyjdź do menu" i "Wyjdź do Windows" oraz z komunikatem "Niezapisany postęp zostanie utracony Czy napewno chcesz wyjsc z gry?"
+
+- Zmieniono umiejscowienie wszystkich przycisków w menu głównym(podniesiono je do góry)
+
+- Przycisk "Ustawienia gry" w menu pauzy prowadzi teraz do menu z przyciskiem "Wróć" oraz tekstu z informacjacjami o sterowaniu
+
+- Przycisk "Ustawienia gry" w głównym menu prowadzi teraz do menu z przyciskiem "Wróć" oraz tekstu z informacjacjami o sterowaniu i wersji gry
+
+-
+POPRAWKI BŁĘDÓW:
+- Błąd: 00004 - Konieczność naciśnięcia klawisza "P" dwa razy w celu wywołania menu pauzy
+
+-
+Ważne zmiany w silniku Unreal Engine 5:
+-
+INNE:
+- We wcześniejszej aktualizacji zmieniono tekst informujący o wersji gry z v0.0.1 na v0.0.2 ale nie zostało o tym wspomniane w "Changelogu"
+-
