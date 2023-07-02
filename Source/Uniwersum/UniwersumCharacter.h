@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "InputActionValue.h"
-#include "Uniwersum_v0_0_1_UE5Character.generated.h"
+#include "UniwersumCharacter.generated.h"
 
 class UInputComponent;
 class USkeletalMeshComponent;
@@ -15,7 +15,7 @@ class UAnimMontage;
 class USoundBase;
 
 UCLASS(config=Game)
-class AUniwersum_v0_0_1_UE5Character : public ACharacter
+class AUniwersumCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
@@ -28,20 +28,20 @@ class AUniwersum_v0_0_1_UE5Character : public ACharacter
 	UCameraComponent* FirstPersonCameraComponent;
 
 	/** MappingContext */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta=(AllowPrivateAccess = "true"))
 	class UInputMappingContext* DefaultMappingContext;
 
 	/** Jump Input Action */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta=(AllowPrivateAccess = "true"))
 	class UInputAction* JumpAction;
 
 	/** Move Input Action */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta=(AllowPrivateAccess = "true"))
 	class UInputAction* MoveAction;
 
 	
 public:
-	AUniwersum_v0_0_1_UE5Character();
+	AUniwersumCharacter();
 
 protected:
 	virtual void BeginPlay();

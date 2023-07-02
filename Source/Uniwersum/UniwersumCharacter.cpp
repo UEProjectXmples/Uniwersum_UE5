@@ -1,7 +1,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "Uniwersum_v0_0_1_UE5Character.h"
-#include "Uniwersum_v0_0_1_UE5Projectile.h"
+#include "UniwersumCharacter.h"
+#include "UniwersumProjectile.h"
 #include "Animation/AnimInstance.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -10,9 +10,9 @@
 
 
 //////////////////////////////////////////////////////////////////////////
-// AUniwersum_v0_0_1_UE5Character
+// AUniwersumCharacter
 
-AUniwersum_v0_0_1_UE5Character::AUniwersum_v0_0_1_UE5Character()
+AUniwersumCharacter::AUniwersumCharacter()
 {
 	// Character doesnt have a rifle at start
 	bHasRifle = false;
@@ -37,7 +37,7 @@ AUniwersum_v0_0_1_UE5Character::AUniwersum_v0_0_1_UE5Character()
 
 }
 
-void AUniwersum_v0_0_1_UE5Character::BeginPlay()
+void AUniwersumCharacter::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
@@ -55,7 +55,7 @@ void AUniwersum_v0_0_1_UE5Character::BeginPlay()
 
 //////////////////////////////////////////////////////////////////////////// Input
 
-void AUniwersum_v0_0_1_UE5Character::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
+void AUniwersumCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
 	// Set up action bindings
 	if (UEnhancedInputComponent* EnhancedInputComponent = CastChecked<UEnhancedInputComponent>(PlayerInputComponent))
@@ -65,15 +65,15 @@ void AUniwersum_v0_0_1_UE5Character::SetupPlayerInputComponent(class UInputCompo
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 
 		//Moving
-		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AUniwersum_v0_0_1_UE5Character::Move);
+		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AUniwersumCharacter::Move);
 
 		//Looking
-		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AUniwersum_v0_0_1_UE5Character::Look);
+		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AUniwersumCharacter::Look);
+
 	}
 }
 
-
-void AUniwersum_v0_0_1_UE5Character::Move(const FInputActionValue& Value)
+void AUniwersumCharacter::Move(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D MovementVector = Value.Get<FVector2D>();
@@ -86,7 +86,7 @@ void AUniwersum_v0_0_1_UE5Character::Move(const FInputActionValue& Value)
 	}
 }
 
-void AUniwersum_v0_0_1_UE5Character::Look(const FInputActionValue& Value)
+void AUniwersumCharacter::Look(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D LookAxisVector = Value.Get<FVector2D>();
@@ -99,12 +99,12 @@ void AUniwersum_v0_0_1_UE5Character::Look(const FInputActionValue& Value)
 	}
 }
 
-void AUniwersum_v0_0_1_UE5Character::SetHasRifle(bool bNewHasRifle)
+void AUniwersumCharacter::SetHasRifle(bool bNewHasRifle)
 {
 	bHasRifle = bNewHasRifle;
 }
 
-bool AUniwersum_v0_0_1_UE5Character::GetHasRifle()
+bool AUniwersumCharacter::GetHasRifle()
 {
 	return bHasRifle;
 }

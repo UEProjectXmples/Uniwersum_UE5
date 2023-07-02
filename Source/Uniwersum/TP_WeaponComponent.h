@@ -6,17 +6,17 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "TP_WeaponComponent.generated.h"
 
-class AUniwersum_v0_0_1_UE5Character;
+class AEldredCharacter;
 
 UCLASS(Blueprintable, BlueprintType, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class UNIWERSUM_V0_0_1_UE5_API UTP_WeaponComponent : public USkeletalMeshComponent
+class UNIWERSUM_API UTP_WeaponComponent : public USkeletalMeshComponent
 {
 	GENERATED_BODY()
 
 public:
 	/** Projectile class to spawn */
 	UPROPERTY(EditDefaultsOnly, Category=Projectile)
-	TSubclassOf<class AUniwersum_v0_0_1_UE5Projectile> ProjectileClass;
+	TSubclassOf<class AUniwersumProjectile> ProjectileClass;
 
 	/** Sound to play each time we fire */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Gameplay)
@@ -43,7 +43,7 @@ public:
 
 	/** Attaches the actor to a FirstPersonCharacter */
 	UFUNCTION(BlueprintCallable, Category="Weapon")
-	void AttachWeapon(AUniwersum_v0_0_1_UE5Character* TargetCharacter);
+	void AttachWeapon(AEldredCharacter* TargetCharacter);
 
 	/** Make the weapon Fire a Projectile */
 	UFUNCTION(BlueprintCallable, Category="Weapon")
@@ -56,5 +56,5 @@ protected:
 
 private:
 	/** The Character holding this weapon*/
-	AUniwersum_v0_0_1_UE5Character* Character;
+	AEldredCharacter* Character;
 };
